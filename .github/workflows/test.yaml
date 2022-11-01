@@ -1,7 +1,7 @@
 name: Workflow test
 on: push
 jobs:
-  Run-Test-Tests:
+  Run-Tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
