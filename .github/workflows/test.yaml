@@ -1,0 +1,10 @@
+name: Workflow test
+on: psuh
+jobs:
+  Run-Test-Tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Npm install
+      run: npm install
+    - name: Run Actual testcases
+      run: npm test
