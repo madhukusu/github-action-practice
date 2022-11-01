@@ -7,4 +7,4 @@ jobs:
       - name: Npm install
         run: npm install
       - name: Run Actual testcases
-        run: npm testpwd
+        run: npm test
