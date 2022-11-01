@@ -1,5 +1,5 @@
 name: Workflow test
-on: psuh
+on: push
 jobs:
   Run-Test-Tests:
     runs-on: ubuntu-latest
@@ -7,4 +7,4 @@ jobs:
     - name: Npm install
       run: npm install
     - name: Run Actual testcases
-      run: npm test
+      run: npm testpwd
