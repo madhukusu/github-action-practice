@@ -10,3 +10,17 @@ jobs:
         run: npm install
       - name: Run Actual testcases
         run: npm test
+  Build-Code:
+    needs: Run-Test-Tests
+    runs-on: ubuntu-latest
+    steps:
+      - nmae: Install-Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: NPM-Install
+        run: npm ci
+      - name: Build
+        run: npm build
+      - name: Deploy
+        run: echo "Deplyed ..."
