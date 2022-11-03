@@ -2,12 +2,17 @@ name: Workflow test
 on: 
   push:
     branches:
-      - 'Dev'
+      - 'main'
+    paths-ignore:
+      - .github/workflows
   workflow_dispatch:
+env:
+  NAME: madhu
 jobs:
   Run-Tests:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Hello $NAME"
       - name: Checkout 
         uses: actions/checkout@v3
       - name: Npm install
